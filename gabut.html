@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body >
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: rgb(238, 238, 238);
+        }
+        body.dark{
+            background-color: rgb(37, 37, 37);
+        }
+        .btn{
+            height: 100px;
+            width: 100px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+            color: rgb(214, 209, 209);
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px,
+            rgba(185, 185, 185, 0.993) 0px 3px 8px inset;
+            cursor: pointer;
+            transition: all .2s ease-in;
+            border-radius: 10px;
+        }
+        .btn.active{
+            color: rgb(25, 219, 25);
+            box-shadow: rgba(20, 20, 20, 0.993) 0px 3px 8px,
+            rgba(59, 59, 59, 0.993) 0px 3px 8px inset;
+            background-color: rgb(31, 31, 31);
+        } 
+    </style>
+    <div class="btn ">
+        <i class="fa-solid fa-power-off"></i>
+    </div>
+
+    <script>
+        document.querySelector('.btn').addEventListener('click', () => {
+        const btn  =  document.querySelector('.btn')
+        const body  =  document.querySelector('body')
+        btn.classList.toggle("active");
+            if(btn.className === "btn active"){
+               body.classList.add('dark')
+            } else {
+                body.classList.remove('dark')
+            }
+        })
+    </script>
+</body>
+</html>

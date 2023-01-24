@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .box{
+            height: 200px;
+            width: 30px;
+            background-color: lightblue;
+            border: 3px solid blueviolet;
+            transition: .5s ease-in-out;
+            overflow: hidden;
+        }
+        .box:hover{
+            width:  90vw;
+        }
+        .swiper {
+  width: 600px;
+  height: 300px;
+}
+    </style>
+    <div class="box">
+      <p>  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam esse doloremque molestias, distinctio, reprehenderit aut fuga fugit est maiores eius id tempora.</p>
+    </div>
+
+ 
+        <div class="swiper"> 
+            <div class="swiper-wrapper"> 
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            </div> 
+            <div class="swiper-pagination"></div> 
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> 
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+        // Optional parameters
+            direction: 'horizontal',
+            loop: false,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }, 
+            });
+    </script>
+</body>
+</html>
